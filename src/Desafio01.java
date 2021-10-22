@@ -16,7 +16,7 @@ public class Desafio01 {
 		String estados[] = { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB",
 				"PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" };
 		for (int i = 0; i < estados.length; i++) {
-			if (estados[i].equals(estado)) {
+			if (estados[i].equalsIgnoreCase(estado)) {
 				return true;
 			}
 		}
