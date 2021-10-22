@@ -13,11 +13,14 @@ public class Desafio01 {
 	 */
 
 	public static boolean validarSiglaEstado(String estado) {
-		if (estado.equals( "SP")) {
-			return true;
-		} else {
-			return false;
+		String estados[] = { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB",
+				"PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" };
+		for (int i = 0; i < estados.length; i++) {
+			if (estados[i].equals(estado)) {
+				return true;
+			}
 		}
+		return false;
 	}
 
 	public static void main(String[] args) {
@@ -26,10 +29,10 @@ public class Desafio01 {
 		System.out.println("Por favor, ingrese as siglas do estado onde mora:");
 		siglaDigitadaPeloUsuario = leitor.next();
 		validarSiglaEstado(siglaDigitadaPeloUsuario);
-		
-		if(validarSiglaEstado(siglaDigitadaPeloUsuario) == true) {
+
+		if (validarSiglaEstado(siglaDigitadaPeloUsuario) == true) {
 			System.out.println("O Estado existe");
-		}else {
+		} else {
 			System.out.println("O Estado não existe");
 		}
 		leitor.close();
